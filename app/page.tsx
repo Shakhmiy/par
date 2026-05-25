@@ -3,27 +3,25 @@ import Image from "next/image";
 import Logo from "@/public/Logo.svg";
 import Header from "@/components/layout/header";
 import Kos from "@/public/arrow-up-left.svg"
+import Card from "@/components/ui/card";
+import Gor from "@/public/Vecctor.svg";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col text-center">
-      <Header/>
-
-      <div className="bg-black min-h-screen">
-        <div className="">
-            <h1 className="text-8x1 text-white pt-100">ПАТНЁРСКИЕ ПРОЕКТЫ 26 КАДРА</h1>
-            <p className="text-white text-4x1 pt-8 pb-8">Практико-ориентированное обучение, <br/>  подготовка специалистов и совместные <br/> проекты с индустрией</p>
-            <div className="flex items-center justify-center">
-              <Link href="!" className="bg-white rounded:full p-2 text-[#000000] w-[228px] ">Смотреть кейсы</Link>
-              <Image
-                src={Kos}
-                width={48}
-                height={48}
-                alt="a cool Image" 
-              />
-            </div>
+      <Card/>
+      <Image className="connainer mx-auto"
+              src={Gor}
+              width={3000}
+              height={200}
+              alt="a cool Image" 
+            />
+      <div className="bg-white min-h-screen">
+        <div className="container mx-auto flex flex-col w-[1160px] mt-8 gap-12"> 
+          <h3 className="text-black w-[320px] justify-start items-center font-light">Кейсы</h3>
         </div>
       </div>
+
     </div>
   )
-} 
+}

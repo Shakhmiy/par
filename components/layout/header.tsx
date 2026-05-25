@@ -5,16 +5,20 @@ import Logo from "@/public/Logo.svg";
 
 export default function Header() {
     return (
-      <div className="flex gap-185 m-[16px] justify-between px-[129px] py-[16px] ">
+      <div className="flex flex-col">
+        <div className="flex flex-row container mx-auto mt-4 justify-between"> 
       <Image
         src={Logo}
         width={300}
         height={36}
         alt="a cool Image" 
       />
-      <nav className="flex justify-center w-[130px] h-[51px] bg-[#ffffff] text-[#000000] rounded-full p-4">
-        <Link href="!">Связаться</Link>
+      <nav className="flex">
+        <Link className="flex justify-center items-center rounded-[999] bg-white text-black py-4 px-6" href="!">Связаться</Link>
       </nav>
+      </div>
     </div>
     )
 }
+
+
